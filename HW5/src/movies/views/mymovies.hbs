@@ -1,0 +1,18 @@
+<p>Movies You've Added</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+  </tr>
+  {{#each sessionMovies}}
+    <tr>
+      <th style="text-align:left">{{title}}</th>
+      <th>{{year}}</th>
+      <th>{{director}}</th>
+    </tr>
+  {{/each}}
+</table>
+
+<a href="/movies"> Home </a> <br>
+<a href="/movies/add"> Add movie </a>

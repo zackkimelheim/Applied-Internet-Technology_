@@ -1,0 +1,33 @@
+<form method="GET" action="/movies">
+  Director: <input name="Director" type="text">
+  <input type="submit" value="Filter">
+  <input type="submit" value="Reset"> <br>
+</form>
+
+<p>{{str}}</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+  </tr>
+  {{#each movies}}
+    <tr>
+      <th style="text-align:left">{{title}}</th>
+      <th>{{year}}</th>
+      <th>{{director}}</th>
+    </tr>
+  {{/each}}
+</table>
+
+
+<a href="/movies/add"> Add a Movie </a><br>
+<a href="/movies/mymovies"> My Movies </a>
+
+<h3> Delete a Movie </h3>
+<form method="POST" action="/movies">
+  Title: <input name="title" type="text">
+  Year: <input name="year" type="number">
+  Director: <input name="director" type="text">
+  <input type="submit" value="delete">
+</form>

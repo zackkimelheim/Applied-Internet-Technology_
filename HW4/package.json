@@ -1,0 +1,28 @@
+{
+  "name": "zk377-homework4",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-007-fall-2017/zk377-homework04.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0480-007-fall-2017/zk377-homework04/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0480-007-fall-2017/zk377-homework04#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "eslint": "^4.8.0",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-mocha": "^4.11.0"
+  }
+}

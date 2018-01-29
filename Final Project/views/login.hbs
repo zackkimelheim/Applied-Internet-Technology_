@@ -1,0 +1,71 @@
+
+<div class="row">
+		<!--login-profile-->
+
+		<!--login-profile-->
+		<!--signin-form-->
+		<div class="container col s3">
+			<div class="signin-form profile">
+				<h4>Login</h4>
+				<div style="padding-bottom: 30px">
+					<form action="/login" method="post">
+						<!-- <input type="text" name="email" placeholder="E-mail" required=""> -->
+						<input type="text" name="username" placeholder="Username" required="">
+						<input type="password" name="password" placeholder="Password" required="">
+            <button class="waves-effect waves-light btn left">log in</button><br><br>
+					</form>
+				</div>
+
+
+				<!-- <a class="waves-effect waves-light btn social facebook" href="/auth/facebook"><i class="fa fa-facebook"></i> Sign in with facebook</a> -->
+
+
+
+			</div>
+		</div>
+		<!-- <div class="agile"> -->
+			<div class="container col s3">
+				<h4>Register</h4>
+				<div class="login-form">
+					<form action="/signup" method="POST">
+            <input type="text" name="first" placeholder="First Name" required="">
+            <input type="text" name="last" placeholder="Last Name" required="">
+						<input type="text" name="username" placeholder="Username" required="">
+						<input type="text" name="email" placeholder="E-mail" required="">
+						<input type="password" name="password" placeholder="Password" required="">
+						<input type="password" name="password2" placeholder="Re-enter Password" required="">
+
+
+						<!-- <input type="password" name="password" placeholder="Confirm Password" required=""> -->
+            <button class="waves-effect waves-light btn left">register</button><br><br>
+					</form>
+				</div>
+
+				{{#if errors}}
+				<div class="container">
+					<p style="color:red"> {{errors}} </p>
+				</div>
+				{{/if}}
+
+				{{#if usertaken}}
+				<div class="container">
+					<p style="color:red"> {{usertaken}} </p>
+				</div>
+				{{/if}}
+
+				{{#if emailtaken}}
+				<div class="container">
+					<p style="color:red"> {{emailtaken}} </p>
+				</div>
+				{{/if}}
+
+				{{#if success}}
+				<div class="container">
+					<p style="color:green"> {{success}} </p>
+				</div>
+				{{/if}}
+
+			</div>
+
+
+</div>

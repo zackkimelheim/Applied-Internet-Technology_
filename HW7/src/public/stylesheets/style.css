@@ -1,0 +1,99 @@
+body{
+  background-image: url("http://www.bostonherald.com/sites/default/files/styles/gallery/public/media/2014/12/26/12282014BlackjackTable.jpg?itok=tZVWyqvG");
+  background-size: cover;
+}
+.playButton{
+
+}
+
+.start{
+  background-color: white;
+  padding: 10px;
+  width: 300px;
+  height: 30px;
+  border-style: solid;
+  margin: auto;
+  margin-top: 20%;
+  margin-left: 10%;
+}
+
+.hide {
+  display: none;
+}
+
+.intro{
+  color:white;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 50px;
+  padding: none;
+}
+
+.cardDisplay{
+  border-radius: 10px;
+  display: inline-block;
+  width: 140px;
+  height: 200px;
+  border: solid;
+  border-width: thin;
+  border-color: black;
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  background-color: white;
+  background-size: contain;
+}
+
+.cardDisplayHidden{
+  border-radius: 25px;
+  display: inline-block;
+  text-indent: -9999px;
+  width: 140px;
+  height: 200px;
+  border: solid;
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  /*color: red;*/
+  background-image: url("http://www.murphysmagicsupplies.com/images_email/Mandolin_BACK.jpg");
+  background-size: contain;
+
+}
+.hidden{
+  background-image: url("http://www.murphysmagicsupplies.com/images_email/Mandolin_BACK.jpg");
+}
+
+.total{
+  width: 200px;
+  height: 20px;
+  border: solid;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.button{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.button-bar{
+  padding-left: 460px;
+}
+
+.totalOver{
+  position: relative;
+  top: 100px;
+  left: 50px;
+  width: 400px;
+  height: 200px;
+  border: solid;
+  background-color: pink;
+  text-align: center;
+  font-size: 50px;
+}

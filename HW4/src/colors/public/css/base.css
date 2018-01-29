@@ -1,0 +1,57 @@
+html{
+  min-height: 100%;
+  font-style: normal;
+  font-weight: 100;
+  font-family: baskerville;
+}
+body{
+  background-color: black;
+  font-size: 30px;
+  text-align: center;
+}
+a{
+  color: white;
+  text-decoration: none;
+  float: right;
+  padding-right: 3.5rem;
+}
+h1{
+  color: white;
+  text-align: center;
+}
+img{
+  width: 300px;
+  height: 300px;
+}
+p{
+  color:white;
+  text-align: center;
+}
+.bigbox{
+  width: 130px;
+  height: 50px;
+  float: left;
+  padding-right: 5em;
+}
+.inside{
+
+  font-size: 12px;
+  text-align: left;
+  float: left;
+  color: lightgrey;
+}
+
+form{
+  color: red;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  padding-right: 3.5rem;
+  color: white;
+  background-color: #79818e;
+  text-align: center;
+}

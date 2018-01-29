@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href = "/base.css">
+  <link rel="stylesheet" type="text/css" href = "/materialize-social.css">
+
+
+  <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Dejeuner </title>
+
+    <nav style="background-color: #84acd8">
+      <div class="navbar-wrapper ">
+        <a href="/" class="brand-logo" style="font-family: cursive; padding-left:100px; padding-top: 5px"><img src="logo.png" style="width: 200px"></a>
+
+
+        <ul class='right' style="padding-right:50px" >
+          <li><a href="/">Home</a></li>
+          {{#if user}}
+          <li><a href="setplan"> Create Lunch Plan</a></li>
+          <li><a href="lunchplan"> My Lunch Plan</a></li>
+          <li><a href="/profile">Account</a></li>
+          <li><a href="/logout">Logout</a></li>
+          {{/if}}
+        </ul>
+
+      </div>
+    </nav>
+  </style>
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+  </head>
+
+  <body class="grey lighten-4">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    {{{body}}}
+
+    {{#if user}}
+    <div class="fixed-action-btn">
+      <a href="" class="btn-floating blue btn-large"><i class="large material-icons" style="background-color: #7988c1">menu</i></a>
+      <ul>
+        <li><a href="setplan" class="btn-floating green btn-large"><i class="large material-icons" style="background-color: #f2bcae">assignment</i></a></li>
+        <li><a href="remove" class="btn-floating brown btn-large"><i class="large material-icons" style="background-color: #f0e8b5">remove</i></a></li>
+        <li><a href="add" class="btn-floating red btn-large"><i class="large material-icons" style="background-color: #f09cba">add</i></a></li>
+
+      </ul>
+    </div>
+    {{/if}}
+  </body>
+
+</html>

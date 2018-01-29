@@ -1,0 +1,12 @@
+Your current favorite color is {{favColor}}
+<form method="POST" action="">
+	Choose a new favorite color: 
+	<section>
+	<select name="favColor">
+			{{#each options}}
+			<option value="{{hex}}" {{#if selected}}selected{{/if}}>{{name}}</option>
+			{{/each}}
+	</select>	
+	<input type="submit">	
+	</section>
+</form>

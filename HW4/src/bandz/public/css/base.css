@@ -1,0 +1,19 @@
+h1{
+  text-align: center;
+  font-style: normal;
+  font-weight: 100;
+  font-family: baskerville;
+}
+ul{
+  font-style: normal;
+  font-weight: 100;
+  font-family: baskerville;
+  text-align: center;
+  list-style: none;
+}
+form{
+  font-style: normal;
+  font-weight: 100;
+  font-family: baskerville;
+  text-align: center;
+}

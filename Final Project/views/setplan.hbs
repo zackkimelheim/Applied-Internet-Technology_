@@ -1,0 +1,82 @@
+<p class="flow-text container centered" style="padding-top:50px">Create your lunch plan!</p>
+<p class="flow-text container centered" style="font-size:15px; padding-bottom:10px; padding-left:10px">Select a favorite restaurant for each day of the week to create your weekly lunch plan!</p>
+
+
+<form class="" action="/setplan" method="post" >
+    <div class="row .tabs-fixed-width" style="padding-left: 100px;margin-left:auto; margin-right:auto">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s2"><a class="active" href="#test1">Monday</a></li>
+          <li class="tab col s2"><a  href="#test2">Tuesday</a></li>
+          <li class="tab col s2"><a href="#test3">Wednesday</a></li>
+          <li class="tab col s2"><a href="#test4">Thursday</a></li>
+          <li class="tab col s2"><a href="#test5">Friday</a></li>
+        </ul>
+      </div>
+      <div id="test1" class="col s12">
+        <div class="input-field col s12">
+            <select name="monday">
+              <option value="" disabled selected>Choose your option</option>
+              {{#each rests}}
+                <option value="{{name}}">{{name}}</option>
+              {{/each}}
+            </select>
+            <label>Monday</label>
+          </div>
+      </div>
+      <div id="test2" class="col s12">
+        <div class="input-field col s12">
+            <select name="tuesday">
+              <option value="" disabled selected>Choose your option</option>
+              {{#each rests}}
+                <option value="{{name}}">{{name}}</option>
+              {{/each}}
+            </select>
+            <label>Tuesday</label>
+          </div>
+      </div>
+      <div id="test3" class="col s12">
+        <div class="input-field col s12">
+            <select name="wednesday">
+              <option value="" disabled selected>Choose your option</option>
+              {{#each rests}}
+                <option value="{{name}}">{{name}}</option>
+              {{/each}}
+            </select>
+            <label>Wednesday</label>
+          </div>
+      </div>
+      <div id="test4" class="col s12">
+        <div class="input-field col s12">
+            <select name="thursday">
+              <option value="" disabled selected>Choose your option</option>
+              {{#each rests}}
+                <option value="{{name}}">{{name}}</option>
+              {{/each}}
+            </select>
+            <label>Thursday</label>
+          </div>
+      </div>
+      <div id="test5" class="col s12">
+        <div class="input-field col s12">
+            <select name="friday">
+              <option value="" disabled selected>Choose your option</option>
+              {{#each rests}}
+                <option value="{{name}}">{{name}}</option>
+              {{/each}}
+            </select>
+            <label>Friday</label>
+          </div>
+      </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script>
+    </div>
+
+<div style="padding-right:100px">
+  <button class="waves-effect waves-light btn right">submit</button>
+</div>
+
+</form>

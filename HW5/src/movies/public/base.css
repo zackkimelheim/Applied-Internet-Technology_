@@ -1,0 +1,22 @@
+table, th, td {
+    border: 0.25px solid black;
+    font-style: normal;
+    font-weight: 100;
+    font-family: baskerville;
+}
+
+h1{
+  font-style: normal;
+  font-weight: 100;
+  font-family: baskerville;
+}
+h2{
+  font-style: normal;
+  font-weight: 100;
+  font-family: baskerville;
+}
+h3{
+  font-style: normal;
+  font-weight: 100;
+  font-family: baskerville;
+}

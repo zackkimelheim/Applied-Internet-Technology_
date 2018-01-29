@@ -1,0 +1,28 @@
+<form method="GET" action="">
+<span style="color:red">Red:</span> <input name="red" type="number" value="" min='0' max='255'>
+<span style="color:green">Green:</span> <input name="green" type="number" value="" min='0' max='255'  >
+<span style="color:blue">Blue:</span> <input name="blue" type="number" value="" min='0' max='255'>
+<span style="color:white">Number of colors:</span> <input name="total" type="number" value="">
+<input type="submit" value="Submit!">
+</form>
+<br>
+<br>
+<br>
+<!-- Create color that user requested -->
+<div style="background-color:{{input.hex}}" class="bigbox">
+  <div style="color:{{input.inverse}}" class="inside">
+    {{input.name}} {{input.hex}} ({{input.r}},{{input.g}},{{input.b}})
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<!-- Create randomly generated colors -->
+{{#each array as |n|}}
+  <div style="background-color:{{n.hex}}" class="bigbox">
+    <div style="color:{{n.inverse}}" class="inside">
+      {{n.name}} {{n.hex}} ({{n.r}},{{n.g}},{{n.b}})
+    </div>
+  </div>
+{{/each}}

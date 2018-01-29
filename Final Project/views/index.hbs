@@ -1,0 +1,129 @@
+<p class="flow-text container centered" style="padding-top:50px">Welcome back, {{first}}!</p>
+<p class="flow-text container centered" style="font-size:15px; padding-bottom:10px; padding-left:10px">Never stress about lunch again. Manage, add, and filter your favorite restaurants, and create weekly lunch plans all in one place, with Dejeuner!</p>
+
+<!-- Referenced Google Maps API Documentation for the code below in the script tag, and tweaked it around to work for what I wanted -->
+<div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.727967, lng: -73.986765},
+          zoom: 13
+        });
+        {{#each rests}}
+        (function(){
+          var contentString = '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<p id="firstHeading" class="firstHeading"><b>{{name}}</b></p>'+
+             '<div id="bodyContent">'+
+             '<p><b>{{name}}</b>, is a {{cuisinetype}} restaurant with a {{price}} price tag.</p>'+
+             '<p><b>Address</b>: {{address}}</a> </p>'+
+             '</div>'+
+             '</div>';
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200
+          });
+          var myLatLng = new google.maps.LatLng({{latitude}}, {{longitude}});
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!',
+            icon: 'map1.svg'
+          });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+        }());
+        {{/each}}
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHTWOnexq3Q2lkbVKDp8xMucnvqCBGvLs&callback=initMap">
+    </script>
+
+    <a href="add" class="btn-floating red btn-small right" style="margin-top:-360px; margin-right:220px"><i class="large material-icons" style="background-color: #f09cba">add</i></a>
+
+<div class="container">
+  <div class="" style="padding-top: 20px; padding-bottom: 10px">
+    <p>Filter by</p>
+  </div>
+  <form class="" action="" method="GET">
+    <div class="input-field col s12">
+        <select name="cuisine">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="American">American</option>
+          <option value="Asian">Asian</option>
+          <option value="Mexican">Mexican</option>
+          <option value="Italian">Italian</option>
+          <option value="Thai">Thai</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Greek">Greek</option>
+          <option value="Indian">Indian</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Korean">Korean</option>
+          <option value="Brazilian">Brazilian</option>
+          <option value="Russian">Russian</option>
+          <option value="Tex-Mex">Tex-Mex</option>
+          <option value="French">French</option>
+        </select>
+        <label>Cuisine</label>
+      </div>
+      <script type="text/javascript">
+        $(document).ready(function() {
+        $('select').material_select();
+        });
+      </script>
+    <div class="input-field col s12">
+        <select name="price">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="$">$</option>
+          <option value="$$">$$</option>
+          <option value="$$$">$$$</option>
+          <option value="$$$$">$$$$</option>
+        </select>
+        <label>Price</label>
+      </div>
+      <script type="text/javascript">
+        $(document).ready(function() {
+        $('select').material_select();
+        });
+      </script>
+    <button class="btn-floating waves-effect waves-light purple right"><i class="material-icons">chevron_right</i></button>
+  </form>
+
+
+  <div class="center" style="padding-top: 30px">
+    <ul class="collapsible popout" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header active"><i class="material-icons">local_dining</i>All restaurants</div>
+        <div class="collapsible-body">  <table class="bordered highlight centered">
+               <thead>
+                 <tr>
+                     <th>Name</th>
+                     <th>Address</th>
+                     <th>Cuisine</th>
+                     <th>Price</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 {{#each rests}}
+                 <tr>
+                   <td>{{name}}</td>
+                   <td>{{address}}</td>
+                   <td>{{cuisinetype}}</td>
+                   <td>{{price}}</td>
+                 </tr>
+                 {{/each}}
+               </tbody>
+             </table>
+  </div>
+      </li>
+    </ul>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.collapsible').collapsible();
+      });
+    </script>
+  </div>

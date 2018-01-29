@@ -1,0 +1,36 @@
+<p class="flow-text container centered" style="padding-top:50px">Here's your lunch plan for the week</p>
+<p class="flow-text container centered" style="font-size:15px; padding-bottom:10px; padding-left:10px">Want to change your plan? No problem. Click "Create Lunch Plan" in the header.</p>
+
+
+{{#each plan}}
+<table class="bordered highlight centered">
+     <thead>
+       <tr>
+           <th>Day</th>
+           <th>Restaurant</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>Monday</td>
+         <td>{{monday}}</td>
+       </tr>
+       <tr>
+         <td>Tuesday</td>
+         <td>{{tuesday}}</td>
+       </tr>
+       <tr>
+         <td>Wednesday</td>
+         <td>{{wednesday}}</td>
+       </tr>
+       <tr>
+         <td>Thursday</td>
+         <td>{{thursday}}</td>
+       </tr>
+       <tr>
+         <td>Friday</td>
+         <td>{{friday}}</td>
+       </tr>
+     </tbody>
+   </table>
+{{/each}}

@@ -1,0 +1,54 @@
+{{#if err}}
+  <p style="color: red">{{err}}</p>
+{{/if}}
+
+<form action="/image-post-add" method="POST">
+  <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="Image Post Title:" name="title" type="text" class="validate">
+        </div>
+  </div>
+  <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="Image 1 URL" name="url1" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Image 1 Caption" name="caption1" type="text" class="validate">
+        </div>
+  </div>
+  <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="Image 2 URL" name="url2" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Image 2 Caption" name="caption2" type="text" class="validate">
+        </div>
+  </div>
+  <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="Image 3 URL" name="url3" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Image 3 Caption" name="caption3" type="text" class="validate">
+        </div>
+  </div>
+
+
+  <!-- Image Post Title: <input type="text" name="title"><br>
+  Image 1 URL: <input type="text" name="url1">, Caption: <input type="text" name="caption1"><br>
+  Image 2 URL: <input type="text" name="url2">, Caption: <input type="text" name="caption2"><br>
+  Image 3 URL: <input type="text" name="url3">, Caption: <input type="text" name="caption3"><br> -->
+  <!-- <input type="submit" value="Add new image post"> -->
+  <button class="btn waves-effect waves-light" type="submit" name="action">
+   <i class="material-icons right">submit</i>
+ </button>
+</form>
+<div class="container">
+{{#each posts}}
+  <a style="padding-left:100px" href="/image-post/{{slug}}">{{title}}</a><br>
+  {{#each images}}
+  <img class="materialboxed" data-caption={{caption}} width="275" src={{url}}>
+  <p style="font-family: cursive; font-size: 10px; padding-left: 100px">{{caption}}<p>
+  {{/each}}
+{{/each}}
+</div>

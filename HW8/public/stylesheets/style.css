@@ -1,0 +1,62 @@
+body {
+	font-family: sans-serif;
+}
+
+h2 {
+	margin: auto;
+}
+
+form { 
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+form#create-form > div {
+	text-align: left;
+	padding: 5px;
+}
+
+form#create-form label {
+	display: block;
+}
+
+/* table styles */
+table {
+	border-collapse: collapse;
+	margin: auto;
+}
+
+td, th {
+	border: 1px solid #555;
+	text-align: left;
+	padding: 5px;
+}
+
+/* color every other row */
+tr:nth-child(2n) {
+	background-color: #eee;
+}
+
+th {
+	font-weight:bold;
+	background-color: #666699;
+	color: #fff;
+}
+
+#bd {
+	text-align: center;
+}
+
+footer {
+	margin: 15px;
+}
+
+.highlight {
+	background-color:#ffff88;
+}
+
+#addBtn {
+	margin: 15px;
+}

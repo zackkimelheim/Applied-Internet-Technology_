@@ -1,0 +1,29 @@
+{{#each posts}}
+<h3>Modify...{{title}}</h3>
+{{/each}}
+
+<form action="/image-post-edit-delete" method="POST">
+  <div class="container">
+  {{#each posts}}
+    {{#each images}}
+      {{caption}}<input type="checkbox" name=check value={{_id}}><br>
+      <img width="550" src={{url}}><br>
+    {{/each}}
+  <input type="hidden" name=slug value={{slug}}>
+  {{/each}}
+  <input type="submit" name="delete" value="delete">
+</div>
+</form>
+
+{{#if err}}
+  <p style="color: red">{{err}}</p>
+{{/if}}
+
+
+<form action="/image-post-edit-add-to-post" method="POST">
+  Image URL: <input type="text" name="url">, Caption: <input type="text" name="caption"><br>
+  {{#each posts}}
+    <input type="hidden" name=slug value={{slug}}>
+  {{/each}}
+  <input type="submit" value="Add new image post">
+</form>

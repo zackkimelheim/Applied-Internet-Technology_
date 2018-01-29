@@ -1,0 +1,21 @@
+
+<div class="container" style="margin-left:100px">
+
+<p class="flow-text container centered" style="padding-top:50px">Remove restaurants from your list!</p>
+<p class="flow-text container centered" style="font-size:15px; padding-bottom:10px; padding-left:10px">Whatever restaurants you no longer love, banish them forever!</p>
+
+<div class="container">
+  <form class="" action="/remove" method="post">
+  {{#each rests}}
+  <p>
+     <input type="checkbox" id="indeterminate-checkbox{{name}}" name="{{name}}" />
+     <label for="indeterminate-checkbox{{name}}">{{name}}, {{address}}</label>
+  </p>
+  {{else}}
+    <p>You haven't added any restaurants yet!</p>
+  {{/each}}
+  <button class="btn-floating btn-small waves-effect waves-light red" style="margin-left:350px"><i class="material-icons">check</i></button>
+</form>
+</div>
+
+</div>

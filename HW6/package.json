@@ -1,0 +1,32 @@
+{
+  "name": "zk377-homework06",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-007-fall-2017/zk377-homework06.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0480-007-fall-2017/zk377-homework06/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0480-007-fall-2017/zk377-homework06#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.1",
+    "mongoose": "^4.13.0",
+    "mongoose-url-slugs": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.10.0",
+    "eslint-plugin-mocha": "^4.11.0"
+  }
+}
